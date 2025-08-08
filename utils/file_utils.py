@@ -12,4 +12,4 @@ async def save_uploaded_image(file: UploadFile) -> str:
     with open(file_path, "wb") as f:
         content = await file.read()
         f.write(content)
-    return file_path
+    return os.path.normpath(file_path)
