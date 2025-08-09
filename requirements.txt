@@ -7,3 +7,4 @@ websockets
 openai
 python-dotenv
 google-cloud-texttospeech
+python-multipart
