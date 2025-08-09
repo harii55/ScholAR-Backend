@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+aiofiles
+google-cloud-speech
+google-cloud-vision
+websockets
+openai
+python-dotenv
+google-cloud-texttospeech
