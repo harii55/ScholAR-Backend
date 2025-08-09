@@ -25,8 +25,9 @@ async def generate_tts(text: str) -> str:
 
     filename = f"tts_{int(datetime.utcnow().timestamp())}.mp3"
     filepath = os.path.join("static/tts", filename)
+    filepath = os.path.normpath(filepath)
 
     with open(filepath, "wb") as out:
         out.write(response.audio_content)
 
-    return f"/tts/{filename}"
+    return filepath

@@ -14,7 +14,8 @@ async def handle_audio_stream(websocket):
     last_chunk_time = datetime.now(UTC)
     filename = f"{datetime.now(UTC).timestamp()}.wav"
     file_path = os.path.join(AUDIO_SAVE_PATH, filename)
-
+    file_path = os.path.normpath(file_path)
+    
     total_bytes = 0
     while True:
         try:
